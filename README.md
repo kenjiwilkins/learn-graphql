@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learn GraphQL: Bookshelf & Review Management
 
-## Getting Started
+A full-stack application built to explore and master GraphQL connectivity using **Next.js** for the frontend and **Supabase** with a **Yoga/Pothos/Prisma** backend.
 
-First, run the development server:
+## 📚 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The core objective is to create a web application where users can:
+- **Manage a Bookshelf:** Add, edit, and organize books they've read or want to read.
+- **Write Reviews:** Share thoughts and ratings on specific books.
+- **GraphQL Integration:** Learn how to bridge the frontend and backend using a modern GraphQL stack.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** [Next.js](https://nextjs.org/) (App Router, TypeScript)
+- **Backend (GraphQL Server):** [GraphQL Yoga](https://the-guild.dev/graphql/yoga-server) + [Pothos](https://pothos-graphql.dev/) (Code-first schema)
+- **Database / Infrastructure:** [Supabase](https://supabase.com/) (PostgreSQL)
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js installed (pnpm/npm/yarn)
+- A Supabase project created with a PostgreSQL database URL.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/learn-graphql.git
+    cd learn-graphql
+    ```
 
-## Deploy on Vercel
+2.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Environment Setup:**
+    Create a `.env` file in the root and add your database connection string:
+    ```env
+    DATABASE_URL="your-supabase-postgres-url"
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Database Migration:**
+    Run Prisma migrations to set up your schema in Supabase:
+    ```bash
+    npx prisma migrate dev --name init
+    ```
+
+5.  **Run Development Server:**
+    ```bash
+    pnpm dev
+    ```
+
+Open [http://localhost:3000](http://localhost:3000) to see the application in action.
+
+## 📁 Project Structure
+
+- `app/`: Next.js App Router pages and API routes.
+- `prisma/`: Prisma schema and migration files.
+- `lib/`: Shared utilities and GraphQL schema definitions (Pothos).
+- `components/`: Reusable React components.
+
+## 📖 Learn More
+
+Check out the `GEMINI.md` file for project-specific mandates and coding standards.
