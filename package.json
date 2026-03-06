@@ -9,7 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@pothos/core": "^4.12.0",
+    "@pothos/plugin-prisma": "^4.14.2",
+    "@prisma/client": "^7.4.2",
+    "graphql": "^16.13.1",
+    "graphql-yoga": "^5.18.0",
     "next": "16.1.6",
+    "prisma": "^7.4.2",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
