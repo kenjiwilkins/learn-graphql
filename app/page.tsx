@@ -17,8 +17,8 @@ export default function LandingPage() {
       />
 
       {/* Atmospheric overlay layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.06_0.03_250/0.55)] via-[oklch(0.08_0.04_240/0.30)] to-[oklch(0.06_0.03_250/0.70)]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-linear-to-b from-[oklch(0.06_0.03_250/0.55)] via-[oklch(0.08_0.04_240/0.30)] to-[oklch(0.06_0.03_250/0.70)]" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/30 via-transparent to-black/20" />
 
       {/* Navbar */}
       <Navbar />
@@ -85,7 +85,7 @@ export default function LandingPage() {
       </main>
 
       {/* Bottom vignette */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-black/30 to-transparent pointer-events-none" />
     </div>
   )
 }
